@@ -31,6 +31,22 @@
 
    ```$ npm init -y```  -y flag means no ques been asked
 
+   ```$ npm install ``` to download dependencies 
+
+   use ```.gitignore``` to ignore ```node_module```
+   ```$ npm i nodemon -D``` -D for dev dependencies usually use for testing
+
+   ```javascript
+   //in package.json
+    "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1",
+       "start": "node app.js", //***
+       "dev": "nodemon app.js" //*** for development purpose
+     },
+   $ npm run start ---> It will run $ node app.js
+   $ npm run dev   ---> It will run $ nodemon app.js
+   ```
+
    ```javascript
    // npm global command, comes with node
    // npm --version
@@ -50,6 +66,8 @@
    // npm init -y (y=everything default)
    
    ```
+
+   ``` $npm uninstall packagename```
 
    
 
