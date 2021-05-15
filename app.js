@@ -1,10 +1,10 @@
-const {readfile} = require('fs')
-const { reject } = require('lodash')
+const fs  = require('fs')
+const { reject, result } = require('lodash')
 const { resolve } = require('path')
 
 const getText = (path) => {
     return new Promise((resolve, reject) =>{
-        readfile(path, 'utf8', (err,data)=> {
+        fs.readFile(path, 'utf8', (err,data)=> {
             if(err){
                 reject(err)
             }
@@ -14,3 +14,6 @@ const getText = (path) => {
         })
     })
 }
+getText('./content/doc.txt')
+  .then(result => console.log(result))
+  .catch(err => console.log(err))
